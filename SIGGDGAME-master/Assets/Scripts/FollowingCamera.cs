@@ -7,12 +7,17 @@ public class FollowingCamera : MonoBehaviour
 
     GameObject[] targets;
     GameObject target;
+    public float offsetX = -5, offsetY = 0;
+    bool followYAxis = false;
+    private float initY, initZ;
 
     // Use this for initialization
     void Start()
     {
         targets = GameObject.FindGameObjectsWithTag("Player");
         target = targets[0];
+        initY = this.transform.position.y;
+        initZ = this.transform.position.z;
     }
 
     // Update is called once per frame
@@ -20,7 +25,14 @@ public class FollowingCamera : MonoBehaviour
     {
         if (targets != null)
         {
-            transform.position = new Vector3(target.transform.position.x, this.transform.position.y, this.transform.position.z);
+            if (followYAxis)
+            {
+                transform.position = new Vector3(target.transform.position.x + offsetX, target.transform.position.y + offsetY, initZ);
+            }
+            else
+            {
+                transform.position = new Vector3(target.transform.position.x + offsetX, initY, initZ);
+            }
         }
     }
 }

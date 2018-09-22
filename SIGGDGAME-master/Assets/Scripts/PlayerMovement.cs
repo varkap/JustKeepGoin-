@@ -7,8 +7,9 @@ public class PlayerMovement : MonoBehaviour
     public int movementSpeed = 700;
     public int maxHorizontalVelocity = 150;
     public int interval = 25;
-    public int wallPushoff = 200;
+    public int wallPushoff = 50;
     public int jumpHeight = 500;
+    public Animator animator;
     private Rigidbody2D myRigid;
     private BoxCollider2D myBoxCol;
     private Vector2 myBoxColSize, halfBoxColSize;
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         myRigid.transform.rotation = rotation;
+        animator.SetBool("Moving", myRigid.velocity.x < -.01);
 
         if (Input.GetAxis("Horizontal") < 0)
         {
@@ -52,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             jumpCounter++;
             if (myRigid.velocity.x >= 0 && myRigid.velocity.y != 0)
             {
-                myRigid.AddForce(new Vector2(wallPushoff, 0));
+                myRigid.AddForce(new Vector2(wallPushoff + maxHorizontalVelocity, 0));
             }
         }
         if (Input.GetAxisRaw("Vertical") < 0 && canJump && jumpCounter == 0)
