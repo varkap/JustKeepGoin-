@@ -5,11 +5,12 @@ using UnityEngine;
 public class ToggleYAxisCamera : MonoBehaviour {
 
     public GameObject camera;
+    FollowingCamera folCam;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start () {
+        folCam = camera.GetComponent<FollowingCamera>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,7 +21,7 @@ public class ToggleYAxisCamera : MonoBehaviour {
     {
         if (col.CompareTag("Player"))
         {
-            camera.GetComponent<FollowingCamera>().toggleFollowYAxis();
+            folCam.toggleFollowYAxis();
         }
     }
 }

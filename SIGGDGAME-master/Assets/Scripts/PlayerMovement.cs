@@ -53,9 +53,9 @@ public class PlayerMovement : MonoBehaviour
         {
             myRigid.AddForce(new Vector2(0, jumpHeight));
             jumpCounter++;
-            if (myRigid.velocity.x >= 0 && myRigid.velocity.y != 0)
+            if (myRigid.velocity.x >= -.2 && myRigid.velocity.y != 0)
             {
-                myRigid.AddForce(new Vector2(wallPushoff + maxHorizontalVelocity, 0));
+                myRigid.AddForce(new Vector2(wallPushoff + maxHorizontalVelocity, 30));
             }
         }
         if (Input.GetAxisRaw("Vertical") < 0 && canJump && jumpCounter == 0)
