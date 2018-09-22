@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBehavior : MonoBehaviour {
 
@@ -14,11 +15,12 @@ public class EnemyBehavior : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col, int SceneIndex)
     {
         if (col.CompareTag("Player"))
         {
-            //Player hit an enemy, therefore game over!!!
+
+            SceneManager.LoadScene(SceneIndex);
         }
     }
 }
