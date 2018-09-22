@@ -3256,9 +3256,27 @@ Prefab:
       propertyPath: m_Name
       value: JustKeepGoingSign (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114153549743971396, guid: 1a106bca496094148b3224de854cd2a4, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 1a106bca496094148b3224de854cd2a4, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1961203233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1936534857450616, guid: 1a106bca496094148b3224de854cd2a4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1961203232}
+--- !u!114 &1961203234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1961203233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e94042ce6b16f94284ea2ab61395233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneIndex: 9
 --- !u!1 &1983332750
 GameObject:
   m_ObjectHideFlags: 0
