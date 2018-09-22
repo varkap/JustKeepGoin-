@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private bool nowMoving = false;
     private bool canJump;
     private bool isCrouched = false;
+    private bool canUseTheIWinButton = false;
     private int jumpCounter, maxJumps = 1;
     private Quaternion rotation;
 
@@ -72,6 +73,17 @@ public class PlayerMovement : MonoBehaviour
             myBoxCol.size = myBoxColSize;
         }
         canJump = Input.GetAxis("Vertical") <= 0;
+        if (Input.GetAxisRaw("Fire") > 0 && canUseTheIWinButton)
+        {
+            //YOU WIN!!!
+
+            //Add the animation?  otherwise just switch to the you win screen.
+        }
+    }
+
+    public void allowTheIWinButton()
+    {
+        canUseTheIWinButton = true;
     }
 
     void OnCollisionEnter2D(Collision2D col)
