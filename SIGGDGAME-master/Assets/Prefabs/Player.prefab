@@ -87,8 +87,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 1
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 1.6
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -148,11 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a08e16eac560a414eb09f837ced18784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 400
-  maxHorizontalVelocity: 125
+  movementSpeed: 600
+  maxHorizontalVelocity: 150
   interval: 25
   wallPushoff: 60
-  jumpHeight: 480
+  jumpHeight: 580
   animator: {fileID: 95434926656602222}
 --- !u!212 &212126278287146912
 SpriteRenderer:
