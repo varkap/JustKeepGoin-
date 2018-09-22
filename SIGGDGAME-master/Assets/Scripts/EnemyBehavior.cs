@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EnemyBehavior : MonoBehaviour {
 
+    public int SceneIndex = 6;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,7 +17,7 @@ public class EnemyBehavior : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter2D(Collider2D col, int SceneIndex)
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
