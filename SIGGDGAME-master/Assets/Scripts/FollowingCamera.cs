@@ -20,6 +20,11 @@ public class FollowingCamera : MonoBehaviour
         initZ = this.transform.position.z;
     }
 
+    public void toggleFollowYAxis()
+    {
+        followYAxis = !followYAxis;
+    }
+
     // Update is called once per frame
     void Update()
     {
