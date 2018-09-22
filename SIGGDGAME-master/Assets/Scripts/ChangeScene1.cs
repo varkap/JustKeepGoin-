@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class ChangeScene1 : MonoBehaviour
 {
-    string SceneName;
-    void OnClick()
+    
+    public void SceneLoader(int SceneIndex)
     {
-        SceneManager.LoadScene("TrainingLevel", LoadSceneMode.Additive);
+        SceneManager.LoadScene(SceneIndex);
     }
 }
