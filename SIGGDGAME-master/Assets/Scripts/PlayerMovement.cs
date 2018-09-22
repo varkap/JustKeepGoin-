@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void increaseMovementSpeed()
     {
-        maxHorizontalVelocity += interval;
         movementSpeed += interval;
     }
 
