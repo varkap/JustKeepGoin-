@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public int jumpHeight = 500;
     public Animator animator;
     public AudioSource source;
+    public AudioSource explosionSource;
     private Rigidbody2D myRigid;
     private BoxCollider2D myBoxCol;
     private Vector2 myBoxColSize, halfBoxColSize;
@@ -19,7 +21,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isCrouched = false;
     private bool canUseTheIWinButton = false, youWin = false;
     private int jumpCounter, maxJumps = 1;
+    public int WinScene;
     private Quaternion rotation;
+    public GameObject explosion;
 
     // Use this for initialization
     void Start()
@@ -91,7 +95,13 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         myRigid.AddForce(new Vector2(wallPushoff, .8f * jumpHeight));
-        myRigid.AddTorque(-20);
+        myRigid.AddTorque(-18);
+        yield return new WaitForSeconds(1.1f);
+        explosionSource.Play();
+        Instantiate(explosion, explosion.transform.position, explosion.transform.rotation);
+        yield return new WaitForSeconds(.5f);
+        SceneManager.LoadScene(WinScene);
+
     }
 
     public void allowTheIWinButton()
