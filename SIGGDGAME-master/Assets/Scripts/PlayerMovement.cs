@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     public void increaseMovementSpeed()
     {
         maxHorizontalVelocity += interval;
-        movementSpeed += 3*interval;
+        movementSpeed += interval;
     }
 
     // Update is called once per frame
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             jumpCounter++;
             if (myRigid.velocity.x >= -.2 && myRigid.velocity.y != 0)
             {
-                myRigid.AddForce(new Vector2(wallPushoff + .9f*maxHorizontalVelocity, 30));
+                myRigid.AddForce(new Vector2(wallPushoff + maxHorizontalVelocity, 30));
             }
         }
         if (Input.GetAxisRaw("Vertical") < 0 && canJump && jumpCounter == 0)
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
             myBoxCol.size = myBoxColSize;
         }
         canJump = Input.GetAxis("Vertical") <= 0;
-        if (Input.GetButton("Fire") && canUseTheIWinButton)
+        if (Input.GetAxisRaw("Fire") > 0 && canUseTheIWinButton)
         {
             //YOU WIN!!!
 
