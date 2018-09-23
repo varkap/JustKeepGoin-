@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool nowMoving = false;
     private bool canJump;
     private bool isCrouched = false;
-    private bool canUseTheIWinButton = false;
+    private bool canUseTheIWinButton = false, youWin = false;
     private int jumpCounter, maxJumps = 1;
     private Quaternion rotation;
 
@@ -34,53 +34,64 @@ public class PlayerMovement : MonoBehaviour
     public void increaseMovementSpeed()
     {
         maxHorizontalVelocity += interval;
-        movementSpeed += 3*interval;
+        movementSpeed += 3 * interval;
     }
 
     // Update is called once per frame
     void Update()
     {
-        myRigid.transform.rotation = rotation;
-        animator.SetBool("Moving", myRigid.velocity.x < -.01);
+        if (!youWin)
+        {
+            myRigid.transform.rotation = rotation;
+            animator.SetBool("Moving", myRigid.velocity.x < -.01);
 
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            nowMoving = true;
-        }
-        if (nowMoving && myRigid.velocity.x > -maxHorizontalVelocity)
-        {
-            myRigid.AddForce(new Vector2(-movementSpeed * Time.deltaTime, 0));
-        }
-        if (Input.GetAxisRaw("Vertical") > 0 && canJump && jumpCounter < maxJumps)
-        {
-            myRigid.AddForce(new Vector2(0, jumpHeight));
-            jumpCounter++;
-            if (myRigid.velocity.x >= -.2 && myRigid.velocity.y != 0)
+            if (Input.GetAxis("Horizontal") < 0)
             {
-                myRigid.AddForce(new Vector2(wallPushoff + .9f*maxHorizontalVelocity, 30));
+                nowMoving = true;
             }
-            source.Play();
+            if (nowMoving && myRigid.velocity.x > -maxHorizontalVelocity)
+            {
+                myRigid.AddForce(new Vector2(-movementSpeed * Time.deltaTime, 0));
+            }
+            if (Input.GetAxisRaw("Vertical") > 0 && canJump && jumpCounter < maxJumps)
+            {
+                myRigid.AddForce(new Vector2(0, jumpHeight));
+                jumpCounter++;
+                if (myRigid.velocity.x >= -.2 && myRigid.velocity.y != 0)
+                {
+                    myRigid.AddForce(new Vector2(wallPushoff + .9f * maxHorizontalVelocity, 30));
+                }
+                source.Play();
+            }
+            if (Input.GetAxisRaw("Vertical") < 0 && canJump && jumpCounter == 0)
+            {
+                isCrouched = true;
+                myBoxCol.size = halfBoxColSize;
+            }
+            else
+            {
+                isCrouched = false;
+            }
+            if (Input.GetAxisRaw("Vertical") >= 0 && !isCrouched)
+            {
+                myBoxCol.size = myBoxColSize;
+            }
+            canJump = Input.GetAxis("Vertical") <= 0;
         }
-        if (Input.GetAxisRaw("Vertical") < 0 && canJump && jumpCounter == 0)
+        if (Input.GetButton("Fire") && canUseTheIWinButton && !youWin)
         {
-            isCrouched = true;
-            myBoxCol.size = halfBoxColSize;
+            youWin = true;
+            animator.SetBool("Moving", false);
+            myRigid.AddForce(-myRigid.velocity);
+            StartCoroutine(win());
         }
-        else
-        {
-            isCrouched = false;
-        }
-        if (Input.GetAxisRaw("Vertical") >= 0 && !isCrouched)
-        {
-            myBoxCol.size = myBoxColSize;
-        }
-        canJump = Input.GetAxis("Vertical") <= 0;
-        if (Input.GetButton("Fire") && canUseTheIWinButton)
-        {
-            //YOU WIN!!!
+    }
 
-            //Add the animation?  otherwise just switch to the you win screen.
-        }
+    IEnumerator win()
+    {
+        yield return new WaitForSeconds(1);
+        myRigid.AddForce(new Vector2(wallPushoff, .8f * jumpHeight));
+        myRigid.AddTorque(-20);
     }
 
     public void allowTheIWinButton()
