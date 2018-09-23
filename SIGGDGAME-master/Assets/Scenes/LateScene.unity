@@ -204,11 +204,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4374221418140048, guid: 4af7069cfd012154497019474984b3c6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -46.58703
+      value: -48.7
       objectReference: {fileID: 0}
     - target: {fileID: 4374221418140048, guid: 4af7069cfd012154497019474984b3c6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.7219028
+      value: -1.68
       objectReference: {fileID: 0}
     - target: {fileID: 4374221418140048, guid: 4af7069cfd012154497019474984b3c6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -246,11 +246,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4785967748140194, guid: a742c01a6adb47b4893c4b536396f0f8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -83.21179
+      value: -88.0618
       objectReference: {fileID: 0}
     - target: {fileID: 4785967748140194, guid: a742c01a6adb47b4893c4b536396f0f8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.748
+      value: 12.740001
       objectReference: {fileID: 0}
     - target: {fileID: 4785967748140194, guid: a742c01a6adb47b4893c4b536396f0f8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -373,7 +373,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &234290849
@@ -1285,11 +1285,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4923995276703614, guid: 83f8bfbdf0cafc44bbf14f589bfd0840, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -49.28
+      value: -51.28
       objectReference: {fileID: 0}
     - target: {fileID: 4923995276703614, guid: 83f8bfbdf0cafc44bbf14f589bfd0840, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.61
+      value: -1.76
       objectReference: {fileID: 0}
     - target: {fileID: 4923995276703614, guid: 83f8bfbdf0cafc44bbf14f589bfd0840, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2015,7 +2015,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4816068978065870, guid: 1a106bca496094148b3224de854cd2a4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.36
+      value: -1.41
       objectReference: {fileID: 0}
     - target: {fileID: 4816068978065870, guid: 1a106bca496094148b3224de854cd2a4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2354,11 +2354,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4785967748140194, guid: a742c01a6adb47b4893c4b536396f0f8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -84.16727
+      value: -89.01727
       objectReference: {fileID: 0}
     - target: {fileID: 4785967748140194, guid: a742c01a6adb47b4893c4b536396f0f8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 14.55
+      value: 14.542001
       objectReference: {fileID: 0}
     - target: {fileID: 4785967748140194, guid: a742c01a6adb47b4893c4b536396f0f8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2400,11 +2400,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4816068978065870, guid: 1a106bca496094148b3224de854cd2a4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.9
+      value: 2.88
       objectReference: {fileID: 0}
     - target: {fileID: 4816068978065870, guid: 1a106bca496094148b3224de854cd2a4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.36
+      value: -1.41
       objectReference: {fileID: 0}
     - target: {fileID: 4816068978065870, guid: 1a106bca496094148b3224de854cd2a4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2559,11 +2559,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4785967748140194, guid: a742c01a6adb47b4893c4b536396f0f8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -85.38
+      value: -90.23
       objectReference: {fileID: 0}
     - target: {fileID: 4785967748140194, guid: a742c01a6adb47b4893c4b536396f0f8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 13.728
+      value: 13.72
       objectReference: {fileID: 0}
     - target: {fileID: 4785967748140194, guid: a742c01a6adb47b4893c4b536396f0f8, type: 2}
       propertyPath: m_LocalPosition.z
