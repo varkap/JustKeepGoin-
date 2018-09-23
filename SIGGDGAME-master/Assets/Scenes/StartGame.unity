@@ -772,7 +772,7 @@ Prefab:
     - target: {fileID: 114554638670776272, guid: f065df3f93fc35a48b4c8d2db99634aa,
         type: 2}
       propertyPath: SceneIndex
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f065df3f93fc35a48b4c8d2db99634aa, type: 2}
@@ -1000,7 +1000,7 @@ Prefab:
     - target: {fileID: 114554638670776272, guid: f065df3f93fc35a48b4c8d2db99634aa,
         type: 2}
       propertyPath: SceneIndex
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f065df3f93fc35a48b4c8d2db99634aa, type: 2}
@@ -1098,7 +1098,7 @@ Prefab:
     - target: {fileID: 114036731708747212, guid: 6c56bd957eba8a44d9a3fa20f6352913,
         type: 2}
       propertyPath: SceneIndex
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c56bd957eba8a44d9a3fa20f6352913, type: 2}
@@ -1377,7 +1377,7 @@ Prefab:
     - target: {fileID: 114554638670776272, guid: f065df3f93fc35a48b4c8d2db99634aa,
         type: 2}
       propertyPath: SceneIndex
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f065df3f93fc35a48b4c8d2db99634aa, type: 2}
@@ -1828,7 +1828,7 @@ Prefab:
     - target: {fileID: 114554638670776272, guid: f065df3f93fc35a48b4c8d2db99634aa,
         type: 2}
       propertyPath: SceneIndex
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f065df3f93fc35a48b4c8d2db99634aa, type: 2}
@@ -2133,7 +2133,7 @@ Prefab:
     - target: {fileID: 114261990875392918, guid: 619baaaca889f6c4eb3e0c21e816471f,
         type: 2}
       propertyPath: SceneIndex
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 619baaaca889f6c4eb3e0c21e816471f, type: 2}
@@ -2268,7 +2268,7 @@ Prefab:
     - target: {fileID: 114554638670776272, guid: f065df3f93fc35a48b4c8d2db99634aa,
         type: 2}
       propertyPath: SceneIndex
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 50973480578808862, guid: f065df3f93fc35a48b4c8d2db99634aa, type: 2}
@@ -2620,7 +2620,7 @@ Prefab:
     - target: {fileID: 114313438156026294, guid: b181d5e07c7ff5b46bd10220f6e7661d,
         type: 2}
       propertyPath: SceneIndex
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b181d5e07c7ff5b46bd10220f6e7661d, type: 2}
@@ -2904,7 +2904,7 @@ Prefab:
     - target: {fileID: 114554638670776272, guid: f065df3f93fc35a48b4c8d2db99634aa,
         type: 2}
       propertyPath: SceneIndex
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f065df3f93fc35a48b4c8d2db99634aa, type: 2}
@@ -3245,7 +3245,7 @@ Prefab:
     - target: {fileID: 114512472353833340, guid: 66439c6c12c7c3d438775c0ea58388ae,
         type: 2}
       propertyPath: SceneIndex
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66439c6c12c7c3d438775c0ea58388ae, type: 2}
@@ -3318,7 +3318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e94042ce6b16f94284ea2ab61395233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneIndex: 9
+  SceneIndex: 10
 --- !u!1 &1983332750
 GameObject:
   m_ObjectHideFlags: 0
