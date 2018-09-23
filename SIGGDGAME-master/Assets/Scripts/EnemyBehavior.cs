@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyBehavior : MonoBehaviour {
 
-    public int SceneIndex = 6;
+    public int SceneIndex = 8;
 
 	// Use this for initialization
 	void Start () {
