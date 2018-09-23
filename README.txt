@@ -1,4 +1,4 @@
-To play Just Keep Going, run the executable file: 
+To play Just Keep Going, run the executable file titled "GameJam"
 
 Controls:
 D-Pad
