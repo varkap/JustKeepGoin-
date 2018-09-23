@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public int wallPushoff = 50;
     public int jumpHeight = 500;
     public Animator animator;
+    public AudioSource source;
     private Rigidbody2D myRigid;
     private BoxCollider2D myBoxCol;
     private Vector2 myBoxColSize, halfBoxColSize;
@@ -58,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 myRigid.AddForce(new Vector2(wallPushoff + .9f*maxHorizontalVelocity, 30));
             }
+            source.Play();
         }
         if (Input.GetAxisRaw("Vertical") < 0 && canJump && jumpCounter == 0)
         {
